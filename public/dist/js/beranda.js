@@ -1,0 +1,3 @@
+koperasi.controller('beranda', function ($scope) {
+  // body...
+})

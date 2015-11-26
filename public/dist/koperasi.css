@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('/font/Lato-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotothin';
+    src: url('/font/Roboto-Thin-webfont.eot');
+    src: url('/font/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Roboto-Thin-webfont.woff') format('woff'),
+         url('/font/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('/font/Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('/font/RobotoCondensed-Light-webfont.eot');
+    src: url('/font/RobotoCondensed-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/RobotoCondensed-Light-webfont.woff') format('woff'),
+         url('/font/RobotoCondensed-Light-webfont.ttf') format('truetype'),
+         url('/font/RobotoCondensed-Light-webfont.svg#roboto_condensedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  background-color: #dddddd;
+}
+.ui.menu .right.menu .dropdown:last-child .menu, .ui.menu .right.dropdown.item .menu, .ui.buttons > .ui.dropdown:last-child .menu {
+    left: auto;
+    right: 1em;
+}
+h1.ui.header.title {
+  font-family: 'robotothin';
+  margin-top: 2em;
+}
+.ui.violet.header.koperasi {
+  font-family: 'robotothin';
+  text-transform: uppercase;
+}
+.ui.top.attached.menu.kpr-menu {
+  border-radius: 0;
+  margin-top: 0;
+}
+.description .kpr-icon {
+  text-align: center !important;
+  font-size: -webkit-xxx-large;
+  margin-top: 25px;
+}
+.ui.breadcrumb.kpr-bc {
+  margin-top: -2px;
+}
+.kpr-time {
+  float: right;
+  margin-top: 0.425em;
+}
+media="screen"
+.right.menu .pointing.dropdown.item .menu.kpr-dd {
+    margin-top: 0.75em;
+    margin-right: 8px !important;
+}
+.form-group.form-md-line-input .help-block {
+    position: absolute;
+    margin: 2px 0 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    font-size: 13px;
+    margin-top: -2em;
+}
+.ui.segments.title {
+  border-radius: 0 !important;
+  margin-top: -1px !important;
+}
+.ui.grey.inverted.center.aligned.icon.header {
+  margin-top: 1.25em;
+}
+.ui.right.floated.buttons.btn-jenis_simpanan {
+  margin-top: 100px;
+}
+.ui.right.floated.buttons.kpr-tambah {
+  margin-top: -40px;
+}
+.ui.right.floated.buttons.btn-anggota {
+  margin-top: -35px;
+}
+.ui.right.floated.buttons.btn-simpanan {
+  margin-top: 25px;
+}
+.ui.right.floated.buttons.btn-pinjaman {
+  margin-top: 25px;
+}
+h4 {
+    margin: 2px;
+}
+h3 {
+    margin: 3px;
+}
+.tab {
+  margin-left: 50px;
+}
+.ui.right.labeled.input {
+      height: 38px !important;
+}
+.ui.right.labeled.input .ui.basic.label.kpr-rp1 {
+  padding-top: 0.9em;
+}
+.ui.small.right.floated.pagination.menu.kpr-tambah {
+  margin-top: -30px;
+}
+.inverted.violet.circular.search.link.icon {
+  margin: 2px;
+}
+.ui.small.dropdown.kpr {
+  border-radius: 0px;
+}
+.ui.basic.icon.buttons.kpr {
+  border-radius: 0px;
+}
+.ui.input.kpr {
+      padding: 0.55em 1em !important;
+}
+.lap-tab {
+  margin-left: 50px;
+}
