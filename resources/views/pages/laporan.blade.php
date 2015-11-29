@@ -81,7 +81,7 @@
                   </select>
                 </div>
                 <div class="seven wide field">
-                  <div ng-if="lap == 'anggota'">
+                  <div ng-show="lap == 'anggota'">
                   <label>Nama Anggota</label>
                   <select name="jk" ng-model="aggt" dropdown class="ui dropdown">
                     <option value="">Pilih Nama Anggota</option>
@@ -408,7 +408,7 @@
             </tbody>
           </table>
         </div>
-        <button ng-if="lap" onclick="printDiv('laporan')" class="ui right floated violet labeled icon button">
+        <button ng-show="lap" onclick="printDiv()" class="ui right floated violet labeled icon button">
           <i class="print icon"></i>
           Cetak
         </button>
