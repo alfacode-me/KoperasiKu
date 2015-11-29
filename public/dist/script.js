@@ -40,10 +40,18 @@ function checkTime(i) {
 }
 setInterval(showTime, 500);
 
-function printDiv(divName) {
-  var printContents = document.getElementById(divName).innerHTML;
+function printDiv() {
+  var w = window.open();
+  var html = $('#laporan').html();
+  $(w.document.body).html(html);
+  w.print();
+}
+
+function printDiv() {
+  var printContents = document.getElementById('laporan').innerHTML;
   var originalContents = document.body.innerHTML;
   document.body.innerHTML = printContents;
   window.print();
   document.body.innerHTML = originalContents;
+  location.reload();
 }

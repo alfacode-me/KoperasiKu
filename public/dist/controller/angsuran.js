@@ -47,7 +47,7 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
     // Memanggil API Tambah
     $http(req).then(function(response) {
       $scope.psn = "SELAMAT";
-      $scope.pesan = "Data Jenis Simpanan telah tersimpan";
+      $scope.pesan = "Data Angsuran telah tersimpan";
       $(function () {
         $('#dimmer').addClass('active').delay(1500).fadeIn(1000, function () {
           $('#dimmer').removeClass('active').fadeOut(200);

@@ -217,7 +217,7 @@
               <i class="trash icon"></i>
             </div>
             <div class="description">
-              <p>Apakah Anda yakin akan menghapus data anggota <b>@{{delete.id_angsuran}}</b> ?</p>
+              <p>Apakah Anda yakin akan menghapus data angsuran <b>@{{delete.id_angsuran}}</b> ?</p>
               <p>NB: Data anggota yang telah anda hapus tidak dapat dikembalikan.</p>
             </div>
           </div>
