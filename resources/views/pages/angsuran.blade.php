@@ -87,10 +87,17 @@
           <div class="ui form">
             <div class="four fields">
               <div class="field">
+                <label>Nama Anggota</label>
+                <select ng-selected="pilihagt(angsuran.id_anggota)" name="agt" ng-model="angsuran.id_anggota" dropdown class="ui dropdown">
+                  <option value="">Pilih Nama Anggota</option>
+                  <option ng-repeat="aggt in anggota" value="@{{aggt.id_anggota}}">@{{aggt.nama}}</option>
+                </select>
+              </div>
+              <div class="field">
                 <label>ID Pinjaman</label>
-                <select name="pjn" ng-model="angsuran.id_pinjaman" dropdown class="ui dropdown">
+                <select ng-selected="sisa(angsuran.id_pinjaman)" name="pjn" ng-model="angsuran.id_pinjaman" dropdown class="ui dropdown">
                   <option value="">Pilih ID Pinjaman</option>
-                  <option ng-repeat="pj in pinjaman" value="@{{pj.id_pinjaman}}">@{{pj.id_pinjaman}}</option>
+                  <option ng-repeat="pj in pjn" value="@{{pj.id_pinjaman}}">@{{pj.id_pinjaman}}</option>
                 </select>
               </div>
               <div class="field">
@@ -98,14 +105,17 @@
                 <input name="tglA" ng-model="angsuran.tgl_angsuran" type="date">
               </div>
               <div class="field">
-                <label>Jumlah Angsuran</label>
+                <label ng-init="angsuran.jml_angsuran=0">Jumlah Angsuran</label>
                 <input class="ui input kpr" name="ang" ng-model="angsuran.jml_angsuran" type="text">
               </div>
               <div class="field">
+
               </div>
             </div>
             <div class="four fields">
               <div class="field">
+                <label>Sisa Pinjaman</label>
+                <h3>Rp @{{sis}}</h3>
               </div>
               <div class="field">
               </div>

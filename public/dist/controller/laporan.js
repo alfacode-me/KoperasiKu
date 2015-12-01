@@ -8,7 +8,6 @@ koperasiku.controller('laporan', function ($scope, $http, $filter) {
     data: {
     }
   }
-  // Memanggil API Data [FIX]
   $http(req).then(function(response) {
     $scope.anggota = response.data;
   }, function () {

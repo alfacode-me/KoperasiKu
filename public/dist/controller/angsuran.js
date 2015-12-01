@@ -1,9 +1,7 @@
 // Controller Angsuran
 koperasiku.controller('angsuran', function ($scope, $http, $filter) {
   $scope.title = "Angsuran";
-  // Refresh Data [FIX]
   $scope.lihat_angsuran = function () {
-    // Tabel Data [FIX]
     var req = {
       method: 'GET',
       url: '/angsuran/all',
@@ -11,7 +9,6 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
       data: {
       }
     }
-    // Memanggil API Data [FIX]
     $http(req).then(function(response) {
       $scope.ags = response.data;
     }, function () {
@@ -20,7 +17,18 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
   };
   $scope.lihat_angsuran();
   $scope.angsuran = {};
-  // Tabel Data [FIX]
+  var req = {
+    method: 'GET',
+    url: '/anggota/all',
+    headers: {'Content-Type': 'application/json'},
+    data: {
+    }
+  }
+  $http(req).then(function(response) {
+    $scope.anggota = response.data;
+  }, function () {
+  console.log("SERVER ERROR");
+  });
   var req = {
     method: 'GET',
     url: '/pinjaman/all',
@@ -28,13 +36,11 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
     data: {
     }
   }
-  // Memanggil API Data [FIX]
   $http(req).then(function(response) {
     $scope.pinjaman = response.data;
   }, function () {
     console.log("SERVER ERROR");
   });
-  // Tambah pinjaman [FIX]
   $scope.tambah_angsuran = function () {
     var req = {
       method: 'POST',
@@ -44,7 +50,6 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
         angsuran: $scope.angsuran
       }
     }
-    // Memanggil API Tambah
     $http(req).then(function(response) {
       $scope.psn = "SELAMAT";
       $scope.pesan = "Data Angsuran telah tersimpan";
@@ -67,13 +72,11 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
       $scope.lihat_angsuran();
     });
   }
-  // Pilih [FIX]
   $scope.pilih = function (ag) {
     $scope.rincian   = ag;
     $scope.update    = ag;
     $scope.delete    = ag;
   }
-  // Update [FIX]
   $scope.updated = function () {
       $scope.update.tgl_angsuran = $filter('date')($scope.update.tgl_angsuran, 'yyyy-MM-dd');
       var req = {
@@ -84,14 +87,12 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
           update: $scope.update
         }
       }
-      // Memanggil API Masuk
       $http(req).then(function(response) {
         $scope.lihat_angsuran();
       }, function () {
         $scope.lihat_angsuran();
       });
   }
-  // Hapus [FIX]
   $scope.hapus = function () {
     var req = {
       method: 'DELETE',
@@ -101,28 +102,46 @@ koperasiku.controller('angsuran', function ($scope, $http, $filter) {
           delete: $scope.delete
       }
     }
-    // Memanggil API Delete
     $http(req).then(function(response) {
       $scope.lihat_angsuran();
     }, function (argument) {
       $scope.lihat_angsuran();
     });
   }
-  // Fungsi Close [FIX]
   $scope.tutup = function () {
     $(function () {
       $('#pesan').removeClass('active');
     })
     $scope.lihat_angsuran();
   }
+  $scope.pilihagt = function (id) {
+    if (id) {
+      $scope.pjn   = $filter('filter')($scope.pinjaman, {id_anggota: id});
+      $scope.sis = "";
+    }
+    $scope.sis = "";
+  }
+  $scope.sisa = function (id) {
+    if (id) {
+      $scope.pj   = $filter('filter')($scope.pinjaman, {id_pinjaman: id});
+      $scope.sis = $scope.pj[0].jml_pinjaman - $scope.pj[0].jml_cicilan - $scope.angsuran.jml_angsuran;
+    }
+  }
 });
 
-
-// Validasi Form [FIX]
 $(function () {
   $('.ui.form')
   .form({
     fields: {
+      agt: {
+        identifier: 'agt',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Nama Anggota tidak boleh kosong'
+          }
+        ]
+      },
       pjn: {
         identifier: 'pjn',
         rules: [

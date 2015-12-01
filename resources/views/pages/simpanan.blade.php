@@ -274,6 +274,7 @@
                     <option value="created_at">Terakhir di Ubah</option>
                     <option value="id_simpanan">ID Simpanan</option>
                     <option value="nama">Nama Anggota</option>
+                    <option value="jns_simpanan">Jenis Simpanan</option>
                     <option value="tgl_simpanan">Tanggal</option>
                     <option value="simpanan">Simpanan</option>
                     <option value="bunga">Bunga</option>
