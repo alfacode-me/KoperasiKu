@@ -207,7 +207,7 @@
                     <h4>: @{{rincian.nama}}</h4>
                     <h4>: @{{rincian.nama_admin}}</h4>
                     <h4>: @{{rincian.id_pinjaman}}</h4>
-                    <h4>: @{{rincian.tgl_angsuran}}</h4>
+                    <h4>: @{{rincian.tgl_angsuran | date: 'dd-MMM-yyyy'}}</h4>
                     <h4>: Rp @{{rincian.jml_angsuran}}</h4>
                     <h4>: @{{rincian.created_at}}</h4>
                   </div>
@@ -308,7 +308,7 @@
                 <td>@{{ag.nama}}</td>
                 <td>@{{ag.id_pinjaman}}</td>
                 <td>@{{ag.nama_admin}}</td>
-                <td>@{{ag.tgl_angsuran}}</td>
+                <td>@{{ag.tgl_angsuran | date: 'dd-MMM-yyyy'}}</td>
                 <td>Rp @{{ag.jml_angsuran}}</td>
                 <td class="center aligned">
                   <div class="tiny ui icon buttons">

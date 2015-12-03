@@ -357,7 +357,7 @@
             </div>
           </div>
           <!-- Info Jumlah Data -->
-          <h4>Total Data Jenis Simpanan : @{{smp.length}} Data, Menampilkan @{{hasil.length}} data</h4>
+          <h4>Total Data Simpanan : @{{smp.length}} Data, Menampilkan @{{hasil.length}} data</h4>
         </div>
       </div>
       <!-- Footer -->
